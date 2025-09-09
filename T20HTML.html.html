@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 25.2.3.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
+		pre { font-size: 10pt; font-family: "Liberation Mono", monospace; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Yo.fan Views Booster&lt;/title&gt;
+    &lt;style&gt;
+        /* --- Your Styles --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+            background: linear-gradient(to right, #6e8efb, #a777e3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .description {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        .input-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #444;
+            font-weight: 500;
+        }
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            border-color: #6e8efb;
+            outline: none;
+        }
+        button {
+            background: linear-gradient(to right, #6e8efb, #a777e3);
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: 600;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        .secondary-btn {
+            background: linear-gradient(to right, #f5a434, #f5d042);
+        }
+        .disclaimer {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #666;
+            text-align: left;
+        }
+        .success-message {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 5px;
+            display: none;
+        }
+        .tabs-counter {
+            margin-top: 20px;
+            font-weight: 500;
+            color: #555;
+            font-size: 18px;
+        }
+        .error-message {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8d7da;
+            color: #721c24;
+            border-radius: 5px;
+            display: none;
+        }
+        .instructions {
+            margin-top: 25px;
+            text-align: left;
+            padding: 15px;
+            background-color: #e9f7fe;
+            border-radius: 8px;
+        }
+        .instructions h3 {
+            margin-bottom: 10px;
+            color: #1a73e8;
+        }
+        .instructions ol {
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        .progress-container {
+            width: 100%;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+            display: none;
+        }
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #6e8efb, #a777e3);
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        .speed-control {
+            margin: 20px 0;
+            text-align: left;
+        }
+        .speed-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .speed-control input {
+            width: 100%;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;Yo.fan Views Booster&lt;/h1&gt;
+        &lt;p class=&quot;description&quot;&gt;Enter your yo.fan URL and the number of views you want to simulate.&lt;/p&gt;
+
+        &lt;div class=&quot;input-group&quot;&gt;
+            &lt;label for=&quot;url-input&quot;&gt;Yo.fan URL:&lt;/label&gt;
+            &lt;input type=&quot;url&quot; id=&quot;url-input&quot; placeholder=&quot;https://yo.fan/your_page&quot; value=&quot;https://yo.fan/&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;input-group&quot;&gt;
+            &lt;label for=&quot;views-input&quot;&gt;Number of views:&lt;/label&gt;
+            &lt;input type=&quot;number&quot; id=&quot;views-input&quot; placeholder=&quot;Enter number of views&quot; min=&quot;1&quot; max=&quot;50&quot; value=&quot;5&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;speed-control&quot;&gt;
+            &lt;label for=&quot;speed&quot;&gt;Opening Speed (ms delay between tabs):&lt;/label&gt;
+            &lt;input type=&quot;range&quot; id=&quot;speed&quot; min=&quot;100&quot; max=&quot;5000&quot; value=&quot;1000&quot;&gt;
+            &lt;span id=&quot;speed-value&quot;&gt;1000ms&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;button id=&quot;open-tabs&quot;&gt;Start Increasing Views&lt;/button&gt;
+        &lt;button id=&quot;test-popup&quot; class=&quot;secondary-btn&quot;&gt;Test Popup Permission&lt;/button&gt;
+
+        &lt;div class=&quot;progress-container&quot; id=&quot;progress-container&quot;&gt;
+            &lt;div class=&quot;progress-bar&quot; id=&quot;progress-bar&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;tabs-counter&quot; id=&quot;tabs-counter&quot;&gt;
+            Views attempted: &lt;span id=&quot;count&quot;&gt;0&lt;/span&gt;/&lt;span id=&quot;total&quot;&gt;0&lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;success-message&quot; id=&quot;success-message&quot;&gt;
+            Process started. Please allow pop-ups for this site if they are blocked.
+        &lt;/div&gt;
+
+        &lt;div class=&quot;error-message&quot; id=&quot;error-message&quot;&gt;
+            Error: Popups are being blocked. Please allow popups and try again.
+        &lt;/div&gt;
+
+        &lt;div class=&quot;instructions&quot;&gt;
+            &lt;h3&gt;Important Instructions:&lt;/h3&gt;
+            &lt;ol&gt;
+                &lt;li&gt;You must allow popups for this site when your browser asks&lt;/li&gt;
+                &lt;li&gt;For best results, use this tool on a desktop computer&lt;/li&gt;
+                &lt;li&gt;Keep this tab open until the process completes&lt;/li&gt;
+                &lt;li&gt;You may need to interact with each tab for it to fully load&lt;/li&gt;
+                &lt;li&gt;Some browsers may still block multiple popups&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;disclaimer&quot;&gt;
+            &lt;strong&gt;Note:&lt;/strong&gt; This tool simulates views by opening multiple tabs. 
+            Due to browser security restrictions, there are limitations to how many tabs can be opened automatically. 
+            Results may vary based on your browser and settings.
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlInput = document.getElementById('url-input');
+            const viewsInput = document.getElementById('views-input');
+            const speedInput = document.getElementById('speed');
+            const speedValue = document.getElementById('speed-value');
+            const openTabsButton = document.getElementById('open-tabs');
+            const testPopupButton = document.getElementById('test-popup');
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+            const countElement = document.getElementById('count');
+            const totalElement = document.getElementById('total');
+            const progressContainer = document.getElementById('progress-container');
+            const progressBar = document.getElementById('progress-bar');
+
+            speedInput.addEventListener('input', function() {
+                speedValue.textContent = this.value + 'ms';
+            });
+
+            viewsInput.addEventListener('change', function() {
+                if (this.value &gt; 50) {
+                    this.value = 50;
+                    alert('Maximum allowed views is 50 due to browser limitations.');
+                }
+            });
+
+            testPopupButton.addEventListener('click', function() {
+                const testPopup = window.open('', 'testPopup', 'width=100,height=100');
+                if (testPopup) {
+                    testPopup.document.write('&lt;h3&gt;Popup test successful!&lt;/h3&gt;');
+                    setTimeout(() =&gt; {
+                        testPopup.close();
+                        alert('Popup test successful! You can now use the view booster.');
+                    }, 1000);
+                } else {
+                    errorMessage.style.display = 'block';
+                    errorMessage.textContent = 'Popups are blocked. Please allow popups for this site and try again.';
+                }
+            });
+
+            openTabsButton.addEventListener('click', function() {
+                const url = urlInput.value.trim();
+                let views = parseInt(viewsInput.value);
+                const speed = parseInt(speedInput.value);
+
+                if (!url) {
+                    alert('Please enter a valid URL');
+                    return;
+                }
+
+                if (isNaN(views) || views &lt; 1) {
+                    alert('Please enter a valid number of views');
+                    return;
+                }
+
+                if (!url.includes('yo.fan')) {
+                    if (!confirm('This does not appear to be a yo.fan URL. Continue anyway?')) {
+                        return;
+                    }
+                }
+
+                views = Math.min(views, 50);
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+
+                let viewsAttempted = 0;
+                countElement.textContent = viewsAttempted;
+                totalElement.textContent = views;
+                progressContainer.style.display = 'block';
+                progressBar.style.width = '0%';
+                successMessage.style.display = 'block';
+
+                openTabsButton.textContent = 'Processing...';
+                openTabsButton.disabled = true;
+
+                function openTabWithDelay() {
+                    if (viewsAttempted &lt; views) {
+                        try {
+                            const newWindow = window.open(url, '_blank' + viewsAttempted);
+                            if (newWindow) {
+                                viewsAttempted++;
+                                countElement.textContent = viewsAttempted;
+                                const progress = (viewsAttempted / views) * 100;
+                                progressBar.style.width = progress + '%';
+
+                                setTimeout(() =&gt; {
+                                    try {
+                                        newWindow.close();
+                                    } catch (e) {}
+                                }, 2000);
+                            } else {
+                                errorMessage.style.display = 'block';
+                                errorMessage.textContent = 'Popup blocked after ' + viewsAttempted + ' views. Please allow popups.';
+                                openTabsButton.textContent = 'Start Increasing Views';
+                                openTabsButton.disabled = false;
+                                return;
+                            }
+                        } catch (e) {
+                            console.error('Error opening tab:', e);
+                            errorMessage.style.display = 'block';
+                            errorMessage.textContent = 'Error: ' + e.message;
+                            openTabsButton.textContent = 'Start Increasing Views';
+                            openTabsButton.disabled = false;
+                            return;
+                        }
+                        setTimeout(openTabWithDelay, speed);
+                    } else {
+                        successMessage.textContent = 'Process completed! ' + viewsAttempted + ' views attempted.';
+                        openTabsButton.textContent = 'Start Increasing Views';
+                        openTabsButton.disabled = false;
+                    }
+                }
+                openTabWithDelay();
+            });
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
